@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-12-1 12:31:48 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.CMS.entity.Exclude" table="exclude_info">
+        <id name="excludeId" type="int">
+            <column name="exclude_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userId" type="int">
+            <column name="user_id" />
+        </property>
+        <property name="clubId" type="int">
+            <column name="club_id" />
+        </property>
+        <property name="excludeReason" type="java.lang.String">
+            <column name="exclude_reason" />
+        </property>
+        <property name="excludeName" type="java.lang.String">
+            <column name="exclude_name" />
+        </property>
+        <property name="excludeState" type="int">
+            <column name="exclude_state" />
+        </property>
+        <property name="startTime" type="java.sql.Timestamp">
+            <column name="start_time" />
+        </property>
+        <property name="forVotes" type="int">
+            <column name="for_votes" />
+        </property>
+        <property name="againstVotes" type="int">
+            <column name="against_votes" />
+        </property>
+        <property name="neutralVotes" type="int">
+            <column name="neutral_votes" />
+        </property>
+        <property name="endTime" type="java.sql.Timestamp">
+            <column name="end_time" />
+        </property>
+         <property name="expireTime" type="java.sql.Timestamp">
+            <column name="expire_time" />
+        </property>
+    </class>
+</hibernate-mapping>

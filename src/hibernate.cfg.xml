@@ -1,0 +1,39 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<!-- 配置数据库连接信息 -->
+	<!-- 驱动 -->
+	<property name="hibernate.connection.driver_class">
+		com.mysql.jdbc.Driver
+	</property>
+	<!-- 数据库url-->
+	<property name="hibernate.connection.url">
+		jdbc:MySQL://localhost:3306/club
+	</property>
+	<!-- 访问数据库用户名 -->
+	<property name="hibernate.connection.username">root</property>
+	<!-- 访问数据库密码 -->
+	<property name="hibernate.connection.password">deathnote1</property>
+	<!-- 方言（为了更好的操作具体的数据库）-->
+	<property name="hibernate.dialect">
+		org.hibernate.dialect.MySQLInnoDBDialect
+	</property>
+	<!-- 显示执行SQL语句 -->
+	<property name="show_sql">true</property>
+	<property name="format_sql">true</property>
+	<!-- 自动创建表结构配置:update代表在每次启动的时候会追加修改的表结构，但是不会影响原来的数据  -->
+	<property name="hibernate.hbm2ddl.auto">update</property>
+
+	<!-- 引入对应的需要持久化类的配置文件 -->
+	<mapping resource="com/CMS/entity/User.hbm.xml" />
+	<mapping resource="com/CMS/entity/Club.hbm.xml" />
+	<mapping resource="com/CMS/entity/Apply.hbm.xml" />
+	<mapping resource="com/CMS/entity/Exclude.hbm.xml" />
+	<mapping resource="com/CMS/entity/Promotion.hbm.xml" />
+	<mapping resource="com/CMS/entity/ExcludeVoteRecord.hbm.xml"/>
+	<mapping resource="com/CMS/entity/PromotionVoteRecord.hbm.xml"/> 
+</session-factory>
+</hibernate-configuration>

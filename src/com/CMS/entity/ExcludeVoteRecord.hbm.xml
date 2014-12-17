@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-12-3 12:52:20 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.CMS.entity.ExcludeVoteRecord" table="exclude_vote_records">
+        <id name="excludeId" type="int">
+            <column name="exclude_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="userId" type="int">
+            <column name="user_id" />
+        </property>
+        <property name="voteTime" type="java.sql.Timestamp">
+            <column name="vote_time" />
+        </property>
+    </class>
+</hibernate-mapping>

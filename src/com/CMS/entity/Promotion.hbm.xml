@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-12-1 12:36:14 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.CMS.entity.Promotion" table="promotion_info">
+        <id name="promotionId" type="int">
+            <column name="promotion_id" />
+            <generator class="increment" />
+        </id>
+        <property name="clubId" type="int">
+            <column name="club_id" />
+        </property>
+        <property name="promotionState" type="int">
+            <column name="promotion_state" />
+        </property>
+        <property name="promotionName" type="java.lang.String">
+            <column name="promotion_name" />
+        </property>
+        <property name="promotionReason" type="java.lang.String">
+            <column name="promotion_reason" />
+        </property> 
+        <property name="recommenduserId" type="int">
+            <column name="recommenduser_id" />
+        </property>
+        <property name="startTime" type="java.sql.Timestamp">
+            <column name="start_time" />
+        </property>
+        <property name="endTime" type="java.sql.Timestamp">
+            <column name="end_time" />
+        </property>
+         <property name="expireTime" type="java.sql.Timestamp">
+            <column name="expire_time" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014-11-25 10:16:11 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.CMS.entity.User" table="user_info">
+        <id name="userId" type="java.lang.Integer">
+            <column name="User_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="java.lang.String">
+            <column name="user_name" />
+        </property>
+        <property name="userEmail" type="java.lang.String">
+            <column name="user_email" />
+        </property>
+        <property name="userPassword" type="java.lang.String">
+            <column name="user_password" />
+        </property>
+        <property name="userPhone" type="java.lang.String">
+            <column name="user_phone" />
+        </property>
+        <property name="userPart" type="java.lang.String">
+            <column name="user_part" />
+        </property>
+        <property name="userType" type="java.lang.Integer">
+            <column name="user_type" />
+        </property>
+        <property name="clubId" type="java.lang.Integer">
+            <column name="club_id" />
+        </property>
+    </class>
+</hibernate-mapping>
