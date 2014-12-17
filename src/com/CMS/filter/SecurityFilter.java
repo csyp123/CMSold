@@ -22,6 +22,7 @@ import com.CMS.entity.User;
 public class SecurityFilter implements Filter {
 	List<String> list=new ArrayList<String>();
 
+	
     /**
      * Default constructor. 
      */
